@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoApp</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body style="background-color: white">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-xl-10">
+          <div class="card" style="border-radius: 15px">
+            <div class="card-body p-5">
+              <h2 class="mb-3">Todo List</h2>
+              <form
+                class="d-flex justify-content-center align-items-center mb-4"
+              >
+                <div class="form-outline flex-fill">
+                  <label class="form-label" for="form3"
+                    >What do you need to do today?</label>
+                  ><br />
+                  <input
+                    type="text"
+                    id="form3"
+                    class="form-control form-control-lg"
+                    placeholder="Add Your Task here...."
+                  />
+                  <b
+                    ><span
+                      id="error"
+                      style="color: red; display: none"
+                    ></span></b>
+                  <input
+                    type="text"
+                    id="form4"
+                    class="form-control form-control-lg"
+                    placeholder="Description...."
+                  />
+                  <b
+                    ><span
+                      id="error"
+                      style="color: red; display: none"
+                    ></span></b
+                  ><br />
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-lg ms-2"
+                  id="btnsubmit"
+                  style="
+                    background-color: #9dc6f5;
+                    border: none;
+                    color: black;
+                    font-weight: 900;
+                    margin-bottom: 5px;
+                  "
+                >
+                  Add
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="taskremcontainer">
+      <p class="taskRemaining">Task Pending</p>
+      <div class="tasklistrem" style="display: none">
+        <ul class="list-group mb-0" id="taskpending"></ul>
+      </div>
+    </div>
+    <div class="taskcomcontainer">
+      <p class="taskcompletedp">Task Completed</p>
+      <div class="tasklistcom" style="display: none">
+        <ul class="list-group mb-0" id="taskcompleted"></ul>
+      </div>
+    </div> -->
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              TASK PENDING
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                <ul class="list-group mb-0" id="taskpending"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                TASK COMPLETED
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+
+            <ul class="list-group mb-0" id="taskcompleted"></ul>
+          </div>
+        </div>
+      </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
