@@ -46,7 +46,7 @@ function taskDisplay(taskList) {
     class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
     <div class="d-flex align-items-center">
       <span class="checked"><input class="form-check-input" id="checkbx" type="checkbox" value="" aria-label="..." onChange="check('${taskList[i].id}')"/></span>
-      ${taskList[i].title}</br> Des:-${taskList[i].description}
+      ${taskList[i].title}</br>${taskList[i].description}
       <button class="btnremove" style="floadt:right" id="btnremove" onclick="itemDelete('${taskList[i].id}',${i})" ><span class="span">Delete</span></button>
     </div>
   </li>`);
