@@ -24,7 +24,7 @@ window.onload = (e)=>{
 
 function validation(input) {
   let returnVal = true;
-  if (input == "") {
+  if (input.trim() == "") {
     $("#error").css("display", "block");
     $("#error").text("*Input is Empty");
     setTimeout(() => {
