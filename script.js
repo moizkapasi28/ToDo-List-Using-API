@@ -7,6 +7,7 @@ var content;
 var url = "https://internapp.vercel.app/Moiz%20Kapasi/todos/";
 
 window.onload = (e)=>{
+  document.getElementById('form3').focus();
   console.log("page is fully loaded")
   fetch(url, {
     method: "GET",
@@ -107,7 +108,7 @@ $(document).ready(function () {
     e.preventDefault();
     let task = $("#form3").val();
     let des = $("#form4").val();
-    $("#form3").val("");
+    $("#form3").val("").focus();
     $("#form4").val("");
     if (validation(task)) {
       fetch(url, {
